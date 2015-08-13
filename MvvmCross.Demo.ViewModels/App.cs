@@ -1,4 +1,6 @@
+using Cirrious.CrossCore;
 using Cirrious.CrossCore.IoC;
+using MvvmCross.Demo.Core;
 
 namespace MvvmCross.Demo.ViewModels
 {
@@ -10,7 +12,9 @@ namespace MvvmCross.Demo.ViewModels
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
-				
+
+            Mvx.RegisterType<IOmdbApi, OmdbApi>();
+
             RegisterAppStart<ViewModels.FirstViewModel>();
         }
     }

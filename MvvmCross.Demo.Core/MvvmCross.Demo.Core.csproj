@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IOmdbApi.cs" />
     <Compile Include="OmdbApi.cs" />
     <Compile Include="IHttpClient.cs" />
     <Compile Include="Movie.cs" />

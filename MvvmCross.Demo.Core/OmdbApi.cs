@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 namespace MvvmCross.Demo.Core
 {
-    public class OmdbApi
+    public class OmdbApi : IOmdbApi
     {
         private readonly IHttpClient _client;
         public OmdbApi(IHttpClient client) { _client = client; }
