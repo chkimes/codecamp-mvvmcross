@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using Cirrious.CrossCore;
+using Cirrious.MvvmCross.Touch.Platform;
+using Cirrious.MvvmCross.ViewModels;
 using Foundation;
 using UIKit;
 
@@ -11,7 +13,7 @@ namespace MvvmCross.Demo.UI.iOS
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : UIApplicationDelegate
+    public partial class AppDelegate : MvxApplicationDelegate
     {
         // class-level declarations
         UIWindow window;
@@ -28,10 +30,12 @@ namespace MvvmCross.Demo.UI.iOS
             // create a new window instance based on the screen size
             window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            // If you have defined a view, add it here:
-            // window.RootViewController  = navigationController;
+            var setup = new Setup(this, window);
+            setup.Initialize();
 
-            // make the window visible
+            var startup = Mvx.Resolve<IMvxAppStart>();
+            startup.Start();
+
             window.MakeKeyAndVisible();
 
             return true;
