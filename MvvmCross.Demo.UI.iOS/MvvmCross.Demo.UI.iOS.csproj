@@ -122,8 +122,10 @@
       <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1\lib\Xamarin.iOS10\Cirrious.MvvmCross.Touch.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Runtime" />
     <Reference Include="System.Linq.Expressions" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
@@ -134,10 +136,15 @@
     <Content Include="ToDo-MvvmCross\_ Touch UI.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MvvmCross.Demo.Core\MvvmCross.Demo.Core.csproj">
+      <Project>{dca4f17f-25b2-4591-bbf0-ef20db62f215}</Project>
+      <Name>MvvmCross.Demo.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MvvmCross.Demo.ViewModels\MvvmCross.Demo.ViewModels.csproj">
       <Project>{F5CBE279-9696-4BAC-91CF-EDAD823136E6}</Project>
       <Name>MvvmCross.Demo.ViewModels</Name>
     </ProjectReference>
   </ItemGroup>
+  <Import Project="..\MvvmCross.Demo.Shared\MvvmCross.Demo.Shared\MvvmCross.Demo.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

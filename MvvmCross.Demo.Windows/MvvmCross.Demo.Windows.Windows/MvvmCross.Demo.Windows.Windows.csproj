@@ -153,6 +153,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\MvvmCross.Demo.Core\MvvmCross.Demo.Core.csproj">
+      <Project>{dca4f17f-25b2-4591-bbf0-ef20db62f215}</Project>
+      <Name>MvvmCross.Demo.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\MvvmCross.Demo.ViewModels\MvvmCross.Demo.ViewModels.csproj">
       <Project>{f5cbe279-9696-4bac-91cf-edad823136e6}</Project>
       <Name>MvvmCross.Demo.ViewModels</Name>
@@ -162,6 +166,7 @@
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="..\MvvmCross.Demo.Windows.Shared\MvvmCross.Demo.Windows.Shared.projitems" Label="Shared" />
+  <Import Project="..\..\MvvmCross.Demo.Shared\MvvmCross.Demo.Shared\MvvmCross.Demo.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

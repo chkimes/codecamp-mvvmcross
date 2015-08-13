@@ -55,6 +55,12 @@
   <ItemGroup>
     <Content Include="ToDo-MvvmCross\_ Core.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MvvmCross.Demo.Core\MvvmCross.Demo.Core.csproj">
+      <Project>{DCA4F17F-25B2-4591-BBF0-EF20DB62F215}</Project>
+      <Name>MvvmCross.Demo.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

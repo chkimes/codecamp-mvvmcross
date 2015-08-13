@@ -2,6 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using MvvmCross.Demo.Core;
+using MvvmCross.Demo.Shared;
 
 namespace MvvmCross.Demo.Console
 {
@@ -14,7 +15,7 @@ namespace MvvmCross.Demo.Console
 
         static async Task AsyncMain()
         {
-            var omdbApi = new OmdbApi(new WindowsHttpClient());
+            var omdbApi = new OmdbApi(new SharedHttpClient());
 
             while (true)
             {
@@ -64,17 +65,6 @@ namespace MvvmCross.Demo.Console
 
             foreach (var movie in results.Search)
                 System.Console.WriteLine($"{movie.ImdbId}: {movie.Title} ({movie.Year})");
-        }
-    }
-
-    public class WindowsHttpClient : IHttpClient
-    {
-        public async Task<string> Request(string url)
-        {
-            var client = new HttpClient();
-            var response = await client.GetAsync(url);
-            response.EnsureSuccessStatusCode();
-            return await response.Content.ReadAsStringAsync();
         }
     }
 }
