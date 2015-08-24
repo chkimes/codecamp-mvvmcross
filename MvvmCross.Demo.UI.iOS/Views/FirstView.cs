@@ -1,4 +1,5 @@
 using Cirrious.MvvmCross.Binding.BindingContext;
+using Cirrious.MvvmCross.Binding.Touch.Views;
 using Cirrious.MvvmCross.Touch.Views;
 using CoreGraphics;
 using Foundation;
@@ -18,19 +19,28 @@ namespace MvvmCross.Demo.UI.iOS.Views
 
 			// ios7 layout
             if (RespondsToSelector(new Selector("edgesForExtendedLayout")))
-            {
                EdgesForExtendedLayout = UIRectEdge.None;
-            }
-			   
-            var label = new UILabel(new CGRect(10, 10, 300, 40));
-            Add(label);
-            var textField = new UITextField(new CGRect(10, 50, 300, 40));
+
+            var textField = new UITextField(new CGRect(10, 50, 240, 40));
             Add(textField);
 
+            var button = UIButton.FromType(UIButtonType.System);
+            button.Frame = new CGRect(260, 50, 50, 40);
+            button.SetTitle("Search", UIControlState.Normal);
+            Add(button);
+
+            var table = new UITableView(new CGRect(0, 90, 320, 390));
+            Add(table);
+            var source = new MvxStandardTableViewSource(table, "TitleText Title");
+            table.Source = source;
+
             var set = this.CreateBindingSet<FirstView, FirstViewModel>();
-            set.Bind(label).To(vm => vm.Hello);
-            set.Bind(textField).To(vm => vm.Hello);
+            set.Bind(textField).To(vm => vm.MovieName);
+            set.Bind(button).To(vm => vm.UpdateCommand);
+            set.Bind(source).To(vm => vm.FoundMovies);
             set.Apply();
+
+            View.AddGestureRecognizer(new UITapGestureRecognizer(() => textField.ResignFirstResponder()) {CancelsTouchesInView = false});
         }
     }
 }

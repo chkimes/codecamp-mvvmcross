@@ -4,7 +4,7 @@ using Cirrious.MvvmCross.Droid.Views;
 
 namespace MvvmCross.Demo.UI.Android.Views
 {
-    [Activity(Label = "View for FirstViewModel")]
+    [Activity(Label = "Movie Finder")]
     public class FirstView : MvxActivity
     {
         protected override void OnCreate(Bundle bundle)

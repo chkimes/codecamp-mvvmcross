@@ -8,9 +8,24 @@
     mc:Ignorable="d">
 
     <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel>
-            <TextBox Text="{Binding Hello, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-            <TextBlock Text="{Binding Hello}" />
-        </StackPanel>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Text="{Binding MovieName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Content="Search" Command="{Binding UpdateCommand}" Grid.Column="1"/>
+        </Grid>
+        <ListView Grid.Row="1" ItemsSource="{Binding FoundMovies}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Title}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </views:MvxWindowsPage>
