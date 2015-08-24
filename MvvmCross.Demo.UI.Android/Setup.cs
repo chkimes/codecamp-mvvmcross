@@ -1,7 +1,10 @@
 using Android.Content;
+using Cirrious.CrossCore;
 using Cirrious.CrossCore.Platform;
 using Cirrious.MvvmCross.Droid.Platform;
 using Cirrious.MvvmCross.ViewModels;
+using MvvmCross.Demo.Core;
+using MvvmCross.Demo.Shared;
 
 namespace MvvmCross.Demo.UI.Android
 {
@@ -19,6 +22,13 @@ namespace MvvmCross.Demo.UI.Android
         protected override IMvxTrace CreateDebugTrace()
         {
             return new DebugTrace();
+        }
+
+        protected override void InitializeIoC()
+        {
+            base.InitializeIoC();
+
+            Mvx.RegisterType<IHttpClient, SharedHttpClient>();
         }
     }
 }
