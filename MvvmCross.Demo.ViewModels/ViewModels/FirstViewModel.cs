@@ -37,5 +37,6 @@ namespace MvvmCross.Demo.ViewModels.ViewModels
         }
 
         public ICommand UpdateCommand => new MvxCommand(Update);
+        public ICommand ItemSelectedCommand => new MvxCommand<MovieSlim>(m => ShowViewModel<MovieViewModel>(new {id = m.ImdbId}));
     }
 }

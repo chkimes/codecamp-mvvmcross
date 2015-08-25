@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        local:MvxBind="Click CloseCommand" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="5"
+        android:columnCount="2">
+        <TextView
+            android:text="Title"
+            android:padding="4dp" />
+        <TextView
+            local:MvxBind="Text Movie.Title"
+            android:padding="4dp"
+            android:layout_width="0dp"
+            android:layout_gravity="fill_horizontal" />
+        <TextView
+            android:text="Year"
+            android:padding="4dp" />
+        <TextView
+            local:MvxBind="Text Movie.Year"
+            android:layout_width="0dp"
+            android:layout_gravity="fill_horizontal"
+            android:padding="4dp" />
+        <TextView
+            android:text="Director"
+            android:padding="4dp" />
+        <TextView
+            local:MvxBind="Text Movie.Director"
+            android:layout_width="0dp"
+            android:layout_gravity="fill_horizontal"
+            android:padding="4dp" />
+        <TextView
+            android:text="Actors"
+            android:padding="4dp" />
+        <TextView
+            local:MvxBind="Text Movie.Actors"
+            android:layout_width="0dp"
+            android:layout_gravity="fill_horizontal"
+            android:padding="4dp" />
+        <TextView
+            android:text="Plot"
+            android:padding="4dp" />
+        <TextView
+            local:MvxBind="Text Movie.Plot"
+            android:layout_width="0dp"
+            android:layout_gravity="fill_horizontal"
+            android:padding="4dp" />
+    </GridLayout>
+</LinearLayout>

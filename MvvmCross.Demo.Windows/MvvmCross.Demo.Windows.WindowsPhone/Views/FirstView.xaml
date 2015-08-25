@@ -20,7 +20,7 @@
             <TextBox Text="{Binding MovieName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
             <Button Content="Search" Command="{Binding UpdateCommand}" Grid.Column="1"/>
         </Grid>
-        <ListView Grid.Row="1" ItemsSource="{Binding FoundMovies}">
+        <ListView Grid.Row="1" ItemsSource="{Binding FoundMovies}" SelectionChanged="Selector_OnSelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Title}"/>

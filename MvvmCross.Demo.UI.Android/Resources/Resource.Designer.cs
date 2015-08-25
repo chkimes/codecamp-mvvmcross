@@ -116,7 +116,10 @@ namespace MvvmCross.Demo.UI.Android
 			public const int MovieSlim = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int SplashScreen = 2130903043;
+			public const int MovieView = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int SplashScreen = 2130903044;
 			
 			static Layout()
 			{
