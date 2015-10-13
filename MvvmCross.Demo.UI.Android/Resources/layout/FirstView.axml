@@ -13,17 +13,14 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:textSize="40dp"
-            local:MvxBind="Text MovieName" />
+            android:text="Movie Name Goes Here" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="Search"
-            local:MvxBind="Click UpdateCommand" />
+            android:text="Search" />
     </LinearLayout>
-    <Mvx.MvxListView
+    <ListView
         android:layout_width="fill_parent"
         android:layout_height="0dip"
-        android:layout_weight="1"
-        local:MvxBind="ItemsSource FoundMovies"
-        local:MvxItemTemplate="@layout/movieslim" />
+        android:layout_weight="1" />
 </LinearLayout>

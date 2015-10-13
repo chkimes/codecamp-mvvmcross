@@ -17,13 +17,13 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <TextBox Text="{Binding MovieName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-            <Button Content="Search" Command="{Binding UpdateCommand}" Grid.Column="1"/>
+            <TextBox Text="Movie Name Goes Here"/>
+            <Button Content="Search" Grid.Column="1"/>
         </Grid>
-        <ListView Grid.Row="1" ItemsSource="{Binding FoundMovies}">
+        <ListView Grid.Row="1">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Title}"/>
+                    <TextBlock Text="Movie Title Goes Here"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

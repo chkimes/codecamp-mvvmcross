@@ -31,14 +31,6 @@ namespace MvvmCross.Demo.UI.iOS.Views
 
             var table = new UITableView(new CGRect(0, 90, 320, 390));
             Add(table);
-            var source = new MvxStandardTableViewSource(table, "TitleText Title");
-            table.Source = source;
-
-            var set = this.CreateBindingSet<FirstView, FirstViewModel>();
-            set.Bind(textField).To(vm => vm.MovieName);
-            set.Bind(button).To(vm => vm.UpdateCommand);
-            set.Bind(source).To(vm => vm.FoundMovies);
-            set.Apply();
 
             View.AddGestureRecognizer(new UITapGestureRecognizer(() => textField.ResignFirstResponder()) {CancelsTouchesInView = false});
         }
