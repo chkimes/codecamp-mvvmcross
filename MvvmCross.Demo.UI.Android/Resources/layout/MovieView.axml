@@ -7,8 +7,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
-        local:MvxBind="Click CloseCommand" />
+        android:text="Back" />
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +17,6 @@
             android:text="Title"
             android:padding="4dp" />
         <TextView
-            local:MvxBind="Text Movie.Title"
             android:padding="4dp"
             android:layout_width="0dp"
             android:layout_gravity="fill_horizontal" />
@@ -26,7 +24,6 @@
             android:text="Year"
             android:padding="4dp" />
         <TextView
-            local:MvxBind="Text Movie.Year"
             android:layout_width="0dp"
             android:layout_gravity="fill_horizontal"
             android:padding="4dp" />
@@ -34,7 +31,6 @@
             android:text="Director"
             android:padding="4dp" />
         <TextView
-            local:MvxBind="Text Movie.Director"
             android:layout_width="0dp"
             android:layout_gravity="fill_horizontal"
             android:padding="4dp" />
@@ -42,7 +38,6 @@
             android:text="Actors"
             android:padding="4dp" />
         <TextView
-            local:MvxBind="Text Movie.Actors"
             android:layout_width="0dp"
             android:layout_gravity="fill_horizontal"
             android:padding="4dp" />
@@ -50,7 +45,6 @@
             android:text="Plot"
             android:padding="4dp" />
         <TextView
-            local:MvxBind="Text Movie.Plot"
             android:layout_width="0dp"
             android:layout_gravity="fill_horizontal"
             android:padding="4dp" />

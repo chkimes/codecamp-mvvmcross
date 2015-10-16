@@ -28,11 +28,11 @@
             <TextBlock Text="Director" Grid.Column="0" Grid.Row="2" Padding="4"/>
             <TextBlock Text="Actors" Grid.Column="0" Grid.Row="3" Padding="4"/>
             <TextBlock Text="Plot" Grid.Column="0" Grid.Row="4" Padding="4"/>
-            <TextBlock Text="{Binding Movie.Title}" Grid.Column="1" Grid.Row="0" Padding="4"/>
-            <TextBlock Text="{Binding Movie.Year}" Grid.Column="1" Grid.Row="1" Padding="4"/>
-            <TextBlock Text="{Binding Movie.Director}" Grid.Column="1" Grid.Row="2" Padding="4"/>
-            <TextBlock Text="{Binding Movie.Actors}" Grid.Column="1" Grid.Row="3" Padding="4"/>
-            <TextBlock Text="{Binding Movie.Plot}" Grid.Column="1" Grid.Row="4" Padding="4"/>
+            <TextBlock Text="Title Goes Here" Grid.Column="1" Grid.Row="0" Padding="4"/>
+            <TextBlock Text="Year Goes Here" Grid.Column="1" Grid.Row="1" Padding="4"/>
+            <TextBlock Text="Director Goes Here" Grid.Column="1" Grid.Row="2" Padding="4"/>
+            <TextBlock Text="Actors Goes Here" Grid.Column="1" Grid.Row="3" Padding="4"/>
+            <TextBlock Text="Plot Goes Here" Grid.Column="1" Grid.Row="4" Padding="4"/>
         </Grid>
     </StackPanel>
 </views:MvxWindowsPage>

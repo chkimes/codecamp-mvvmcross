@@ -13,11 +13,6 @@ namespace MvvmCross.Demo.Windows.Views
 
         private void Selector_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count == 1)
-            {
-                ((FirstViewModel)ViewModel).ItemSelectedCommand.Execute(e.AddedItems[0]);
-                ((ListView)sender).SelectedIndex = -1;
-            }
         }
     }
 }

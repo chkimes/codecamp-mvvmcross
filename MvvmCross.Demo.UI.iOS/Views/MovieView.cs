@@ -58,16 +58,6 @@ namespace MvvmCross.Demo.UI.iOS.Views
 
             var plot = new UILabel(new CGRect(110, 10 + ySep*6, 200, ySep*4)) {Lines = 6};
             Add(plot);
-
-            var set = this.CreateBindingSet<MovieViewController, MovieViewModel>();
-
-            set.Bind(title).To(vm => vm.Movie.Title);
-            set.Bind(year).To(vm => vm.Movie.Year);
-            set.Bind(director).To(vm => vm.Movie.Director);
-            set.Bind(actors).To(vm => vm.Movie.Actors);
-            set.Bind(plot).To(vm => vm.Movie.Plot);
-
-            set.Apply();
         }
     }
 }

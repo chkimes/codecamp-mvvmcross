@@ -24,7 +24,7 @@
         android:layout_width="fill_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
-        local:MvxBind="ItemsSource FoundMovies; ItemClick ItemSelectedCommand"
+        local:MvxBind="ItemsSource FoundMovies"
         local:MvxItemTemplate="@layout/movieslim"
         />
 </LinearLayout>
