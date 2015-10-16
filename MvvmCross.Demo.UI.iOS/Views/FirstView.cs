@@ -21,15 +21,15 @@ namespace MvvmCross.Demo.UI.iOS.Views
             if (RespondsToSelector(new Selector("edgesForExtendedLayout")))
                EdgesForExtendedLayout = UIRectEdge.None;
 
-            var textField = new UITextField(new CGRect(10, 50, 240, 40));
+            var textField = new UITextField(new CGRect(10, 10, 240, 40));
             Add(textField);
 
             var button = UIButton.FromType(UIButtonType.System);
-            button.Frame = new CGRect(260, 50, 50, 40);
+            button.Frame = new CGRect(260, 10, 50, 40);
             button.SetTitle("Search", UIControlState.Normal);
             Add(button);
 
-            var table = new UITableView(new CGRect(0, 90, 320, 390));
+            var table = new UITableView(new CGRect(0, 50, 320, 390));
             Add(table);
 
             View.AddGestureRecognizer(new UITapGestureRecognizer(() => textField.ResignFirstResponder()) {CancelsTouchesInView = false});
